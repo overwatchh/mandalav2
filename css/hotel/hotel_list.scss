@@ -1,0 +1,68 @@
+nav{
+    border-bottom: none;
+}
+#searchBar{
+    .dropdown:hover>.dropdown-menu{
+        display: block;
+        width: max-content;
+        background-color: #012619;
+        opacity: 0.95;
+        color: #fff;
+    }
+    ul{
+        li{
+            background-color: #012619;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 20px;
+            a{
+                color: #fff;
+                i{
+                    margin-left: 5px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+.hotel-list{
+    .sort{
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+        .active{
+            background-color: #006341;
+            a{
+                color: #fff;
+            }
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            a{
+                color: #000;
+            }
+            a:hover{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        li:hover{
+            background-color: #006341;
+            a{
+                color: #fff;
+            }
+        }
+    }
+    .bg-dark-red{
+        background-color: #a60321;
+    }
+    .bg-light-red{
+        background-color: #f20530;
+    }
+    
+}

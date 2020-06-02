@@ -1,0 +1,21 @@
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #c3a160;
+}
+
+.text-above-img a {
+  color: #fff;
+}
+
+.text-above-img a:hover {
+  color: #c3a160;
+}
+
+.text-above-img:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=news.css.map */

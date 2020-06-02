@@ -1,0 +1,71 @@
+.search {
+  background-image: url("../../images/index/show_case.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.search .btn {
+  background-color: #896d28;
+  color: #fff;
+}
+
+.search .btn:hover {
+  background-color: #fff;
+  color: #896d28;
+}
+
+.search .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.search a {
+  color: #fff;
+}
+
+.search a:hover {
+  background-color: #fff;
+  color: #896d28;
+  text-decoration: none;
+}
+
+section .slick-next {
+  right: 35px;
+}
+
+section .slick-prev {
+  z-index: 1;
+  left: 35px;
+}
+
+section .slick-prev:before, section .slick-next:before {
+  font-size: 35px;
+  color: #000;
+}
+
+section .slick-next, section .slick-prev {
+  opacity: .5;
+}
+
+section .slick-next:hover, section .slick-prev:hover {
+  opacity: 1;
+}
+
+section .slick-dots {
+  bottom: 2em;
+}
+
+section .slick-dots li button:before {
+  font-size: 15px;
+  color: #000;
+}
+
+.suggestion-carousel .slick-slide {
+  margin-right: 1em;
+}
+
+.inspiration {
+  background-color: #ddd;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,13 @@
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #c3a160;
+}
+
+.news-detail .border-bottom {
+  border-bottom: 1px solid #000;
+}
+/*# sourceMappingURL=news-detail.css.map */

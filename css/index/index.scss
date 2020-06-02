@@ -1,0 +1,66 @@
+$green: #85c215;
+$gray:#ddd;
+$orange:#ffa726;
+.search{
+    background-image: url("../../images/index/show_case.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
+    padding-top: 2em;
+
+    .btn{
+        background-color: #896d28;
+        color: #fff;
+    }
+    .btn:hover{
+        background-color: #fff ;
+        color: #896d28;
+    }
+    .dropdown:hover > .dropdown-menu{
+        display: block;
+    }
+    a{
+        color: #fff;
+    }
+    a:hover{
+        background-color: #fff ;
+        color: #896d28;
+        text-decoration: none;
+    }
+}
+
+section{
+    .slick-next{
+        right: 35px;
+    }
+    .slick-prev{
+        z-index: 1;
+        left: 35px;
+    }
+    .slick-prev:before,.slick-next:before{
+        font-size: 35px;
+        color: #000;
+        
+    }
+    .slick-next,.slick-prev{
+        opacity: .5;
+    }
+    .slick-next:hover,.slick-prev:hover{
+        opacity: 1;
+    }
+    .slick-dots{
+        bottom: 2em;
+        li button:before{
+            font-size: 15px;
+            color: #000;
+        }
+    }
+}
+.suggestion-carousel{
+    .slick-slide{
+        margin-right: 1em;
+    }
+}
+.inspiration {
+    background-color: $gray;
+}

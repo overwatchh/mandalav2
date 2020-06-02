@@ -1,0 +1,45 @@
+.text-green {
+  color: #85c215 !important;
+}
+
+.mt-14vh {
+  margin-top: 14vh;
+}
+
+.text-orange {
+  color: #e3b870;
+}
+
+.bg-dark-green {
+  background-color: #012619 !important;
+}
+
+.bg-little-dark-green {
+  background-color: #014029;
+}
+
+.bg-dark-gray {
+  background-color: #222;
+}
+
+.font-size-default {
+  font-size: 100%;
+}
+
+.font-size-80 {
+  font-size: 80%;
+}
+
+.text-above-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.text-above-img:hover {
+  color: #c3a160;
+}
+/*# sourceMappingURL=customizebootstrap.css.map */

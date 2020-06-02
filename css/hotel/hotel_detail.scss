@@ -1,0 +1,102 @@
+.bg-light-blue{
+    background-color: #e7f3f8;
+}
+
+.bread-nav{
+    border-bottom: 2px solid #deb887;
+    ol{
+        margin: 0;
+        background-color: #fff;
+    }
+}
+.short-info{
+    img:hover{
+        cursor: pointer;
+    }
+}
+.discovery-slick-img{
+    div{
+        margin-right: 1px;
+    }
+    margin-top: 2em;
+    .slick-prev{
+        left: 3px;
+        z-index: 1;
+    }
+    .slick-next{
+        right: 3px;
+    }
+    .slick-dots li button:before{
+        font-size: 10px;
+    }
+}
+.available-room{
+    
+    ul{
+        list-style-type: none;
+        li{
+            margin-bottom: 2px;
+        }
+    }
+    .btn{
+        background-color: #17a2b8;
+    }
+    .btn:hover{
+        background-color: #1a8a9c;
+    }
+    .card{
+        position: relative;
+        p{
+            position: absolute;
+            margin: 0;
+            right: 0px;
+            bottom: 0px;
+            color: #fff;
+            background-color: #000;
+            padding: 5px
+        }
+    }
+}
+.travel-guide{
+    .card{
+        position: relative;
+        .left-right-description{
+            color: #fff;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        .top-right-button{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            a{
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            a:hover{
+                color: #fff;
+                text-decoration: none;
+                background-color: #000;
+            }
+        }
+    }
+}
+.similar-hotel,.visited-hotel{
+    .card{
+        position: relative;
+        span{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+    .card-title{
+        a{
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}

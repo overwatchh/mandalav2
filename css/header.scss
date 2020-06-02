@@ -1,0 +1,7 @@
+$green: #85c215;
+nav{
+    border-bottom: 1px solid #606261;
+    a:hover,.active a{
+        color: $green !important;
+    }
+}

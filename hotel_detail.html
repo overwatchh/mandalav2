@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--momentjs-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!--Slick-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!--Date time picker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+
+    <!--Customize bootsrap-->
+    <link rel="stylesheet" href="css/customizebootstrap.css">
+    <!--header,footer-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!--hotel_detail.css-->
+    <link rel="stylesheet" href="css/hotel/hotel_detail.css">
+    <title>Chi tiết khách sạn</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark-green fixed-top w-100">
+        <a href="index.html" class="navbar-brand"><img src="images/index/logo.png" alt="logo"></a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-white">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="intro.html" class="nav-link text-white">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link text-white">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link text-white">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">
+                        <i class="fa fa-globe"></i>Vietnamese
+                    </a>
+
+                    <div class="dropdown-menu bg-dark-green">
+                        <a href="#" class="dropdown-item text-white">Tiếng Anh</a>
+                        <a href="#" class="dropdown-item text-white">Tiếng Việt</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="sign_in.html" class="nav-link text-white"> <i class="fa fa-users"></i> Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sign_up.html" class="nav-link text-white"> <i class="fa fa-user-plus"></i> Đăng ký</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="row mt-14vh d-flex justify-content-between align-items-center container bread-nav">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="hotel_list.html">Khách sạn tại Hà Nội (220)</a></li>
+            <li class="breadcrumb-item active">Mandala HaNoi</li>
+        </ol>
+        <a href="#" class="text-warning">Xem tất cả 12 khách sạn khác tại Hà Nội</a>
+    </section>
+    <section class="container short-info mt-4">
+        <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p class="p-2 bg-danger text-white rounded d-inline-block">Đang bán chạy</p>
+                    <h6>Mandala Ha Noi</h6>
+                    <p class="text-warning"><i class="fa fa-star fa-2x mr-1"></i><i class="fa fa-star fa-2x mr-1"></i><i class="fa fa-star fa-2x mr-1"></i></p>
+                    <p>147 Phố Nhà Thờ, Hoàn Kiếm, Hà Nội</p>
+                    <a href="#" class="text-primary">Xem trên bản đồ</a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <p><span class="bg-success text-white p-2 rounded">5.0</span> /10 ( <span class="text-success">1</span> bài đánh giá )</p>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="row bg-light-blue p-2 pt-3 pb-3">
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img src="images/hotel/medal.png" alt="">
+                        </div>
+                        <div class="col-9 d-flex justify-content-center align-items-center">
+                            <p><span class="text-success">Được xếp hạng 1</span> trong số 12 chỗ nghỉ tại Hà Nội đối với du khách</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="discovery-slick-img w-100">
+        <div class="discovery-img">
+            <div><img src="images/hotel/be_boi.jpg" class="w-100" alt=""></div>
+            <div><img src="images/hotel/gym.jpg" class="w-100" alt=""></div>
+            <div><img src="images/hotel/be_boi2.jpg" class="w-100" alt=""></div>
+            <div><img src="images/hotel/buffer.jpg" class="w-100" alt=""></div>
+        </div>
+        <script>
+            $(".discovery-img").slick({
+                slidesToShow:3,
+                slidesToScroll:1,
+                dots:true,
+                autoplay:true,
+                autoplaySpeed:2000,
+                responsive:[
+                    {
+                        breakpoint:768,
+                        settings:{
+                            slidesToShow:1,
+                            slidesToScrool:1,
+                            autoplay:true,
+                            autoplaySpeed:2000,
+                            dots:true
+                        }
+                    }
+                ]
+            });
+        </script>
+    </section>
+    <section class="booking-options container">
+        <h4>3 loại phòng và tổng cộng 7 lựa chọn</h4>
+        <p class="text-secondary"><sup>*</sup>home.RoomncludeTaxes</p>
+        <form action="#" class="form-inline">
+           
+        </form>
+    </section>
+    <section class="available-room container">
+        <div class="row mb-2 border-bottom border-secondary">
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Phòng deluxe</h5>
+                <div class="card">
+                    <img src="images/hotel/mandala.jpg" class="w-100" alt="" class="card-img-top">
+                    <p><i class="fa fa-images"></i> (8) Xem thêm</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h5>Giá này bao gồm</h5>
+                <p><i class="fa fa-users text-success"></i> <span class="font-weight-bold">Số lượng người tối đa: 3</span></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Cơ sở vật chất</p>
+                        <ul>
+                            <li><i class="fa fa-bath mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-chalkboard-teacher mr-2"></i>Tivi truyền hình</li>
+                            <li><i class="fab fa-codepen mr-2"></i>Bình nóng lạnh</li>
+                            <li><i class="fa fa-star-of-life mr-2"></i>Tủ lạnh</li>
+                            <li><i class="fa fa-phone mr-2"></i>Điện thoại</li>
+                            <li><i class="fa fa-ribbon mr-2"></i>Khăn tắm</li>
+                            <li><i class="fa fa-tshirt mr-2"></i>Áo choàng tắm</li>
+                            <li><i class="fa fa-shower mr-2"></i>Vòi hoa sen</li>
+                            <li><i class="fa fa-layer-group mr-2"></i>Chậu rửa vệ sinh</li>
+                            <li><i class="fa fa-hand-holding mr-2"></i>Máy sấy tóc</li>
+                            <li><i class="fa fa-leaf mr-2"></i>Ăn sáng tại giường</li>
+                            <li><i class="fa fa-utensils mr-2"></i>Điện thoại về tinh</li>
+                            <li><i class="fa fa-phone-volume mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-shoe-prints mr-2"></i>Dép bông</li>
+                            <li><i class="fab fa-first-order-alt mr-2"></i>Hệ thống sưởi</li>
+                        </ul>
+                        <div class="form-group">
+                            <label for="Số phòng">Số phòng</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Dịch vụ khách sạn</p>
+                        <ul>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Ăn sáng tại giường</li>
+                            <li><i class="fab fa-shopware mr-2"></i> Dọn phòng vệ sinh</li>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Bữa sáng cho 2 ngườii</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Giặt là (ủi)</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Dịch vụ là (ủi)</li>
+                            <li><i class="fa fa-allergies mr-2"></i> Giặt khô</li>
+                            <li><i class="fab fa-servicestack mr-2"></i> Dọn phòng hàng ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Giá phòng trên đêm</h5>
+                <span class="d-inline-block text-white bg-danger p-2 rounded mt-2 mb-2">Giảm 25% hôm nay</span>
+                <p>Giá  mỗi đêm rẻ nhất từ</p>
+                <strike class="d-block font-weight-bold">300,000 <sup>đ</sup></strike>
+                <h6 class="text-danger">225,000 <sup>đ</sup></h6>
+                <p>Các mệnh giá</p>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">225,000</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">262,500</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">375,000</span>
+                <p class="text-success mt-2">Hủy miễn phí</p>
+                <a href="#" class="btn text-white">Đặt phòng</a>
+                <p class="text-danger mt-2">Còn lại 4 phòng</p>
+            </div>
+        </div>
+
+        <div class="row mb-2 border-bottom border-secondary">
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Phòng đôi view biển</h5>
+                <div class="card">
+                    <img src="images/hotel/be_boi2.jpg" class="w-100" alt="" class="card-img-top">
+                    <p><i class="fa fa-images"></i> (8) Xem thêm</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h5>Giá này bao gồm</h5>
+                <p><i class="fa fa-users text-success"></i> <span class="font-weight-bold">Số lượng người tối đa: 3</span></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Cơ sở vật chất</p>
+                        <ul>
+                            <li><i class="fa fa-bath mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-chalkboard-teacher mr-2"></i>Tivi truyền hình</li>
+                            <li><i class="fab fa-codepen mr-2"></i>Bình nóng lạnh</li>
+                            <li><i class="fa fa-star-of-life mr-2"></i>Tủ lạnh</li>
+                            <li><i class="fa fa-phone mr-2"></i>Điện thoại</li>
+                            <li><i class="fa fa-ribbon mr-2"></i>Khăn tắm</li>
+                            <li><i class="fa fa-tshirt mr-2"></i>Áo choàng tắm</li>
+                            <li><i class="fa fa-shower mr-2"></i>Vòi hoa sen</li>
+                            <li><i class="fa fa-layer-group mr-2"></i>Chậu rửa vệ sinh</li>
+                            <li><i class="fa fa-hand-holding mr-2"></i>Máy sấy tóc</li>
+                            <li><i class="fa fa-leaf mr-2"></i>Ăn sáng tại giường</li>
+                            <li><i class="fa fa-utensils mr-2"></i>Điện thoại về tinh</li>
+                            <li><i class="fa fa-phone-volume mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-shoe-prints mr-2"></i>Dép bông</li>
+                            <li><i class="fab fa-first-order-alt mr-2"></i>Hệ thống sưởi</li>
+                        </ul>
+                        <div class="form-group">
+                            <label for="Số phòng">Số phòng</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Dịch vụ khách sạn</p>
+                        <ul>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Ăn sáng tại giường</li>
+                            <li><i class="fab fa-shopware mr-2"></i> Dọn phòng vệ sinh</li>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Bữa sáng cho 2 ngườii</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Giặt là (ủi)</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Dịch vụ là (ủi)</li>
+                            <li><i class="fa fa-allergies mr-2"></i> Giặt khô</li>
+                            <li><i class="fab fa-servicestack mr-2"></i> Dọn phòng hàng ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Giá phòng trên đêm</h5>
+                <span class="d-inline-block text-white bg-danger p-2 rounded mt-2 mb-2">Giảm 25% hôm nay</span>
+                <p>Giá  mỗi đêm rẻ nhất từ</p>
+                <strike class="d-block font-weight-bold">300,000 <sup>đ</sup></strike>
+                <h6 class="text-danger">225,000 <sup>đ</sup></h6>
+                <p>Các mệnh giá</p>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">225,000</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">262,500</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">375,000</span>
+                <p class="text-success mt-2">Hủy miễn phí</p>
+                <a href="#" class="btn text-white">Đặt phòng</a>
+                <p class="text-danger mt-2">Còn lại 4 phòng</p>
+            </div>
+        </div>
+
+        <div class="row mb-2 border-bottom border-secondary">
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Phòng đơn tiêu chuẩn</h5>
+                <div class="card">
+                    <img src="images/hotel/buffer.jpg" class="w-100" alt="" class="card-img-top">
+                    <p><i class="fa fa-images"></i> (8) Xem thêm</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h5>Giá này bao gồm</h5>
+                <p><i class="fa fa-users text-success"></i> <span class="font-weight-bold">Số lượng người tối đa: 3</span></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Cơ sở vật chất</p>
+                        <ul>
+                            <li><i class="fa fa-bath mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-chalkboard-teacher mr-2"></i>Tivi truyền hình</li>
+                            <li><i class="fab fa-codepen mr-2"></i>Bình nóng lạnh</li>
+                            <li><i class="fa fa-star-of-life mr-2"></i>Tủ lạnh</li>
+                            <li><i class="fa fa-phone mr-2"></i>Điện thoại</li>
+                            <li><i class="fa fa-ribbon mr-2"></i>Khăn tắm</li>
+                            <li><i class="fa fa-tshirt mr-2"></i>Áo choàng tắm</li>
+                            <li><i class="fa fa-shower mr-2"></i>Vòi hoa sen</li>
+                            <li><i class="fa fa-layer-group mr-2"></i>Chậu rửa vệ sinh</li>
+                            <li><i class="fa fa-hand-holding mr-2"></i>Máy sấy tóc</li>
+                            <li><i class="fa fa-leaf mr-2"></i>Ăn sáng tại giường</li>
+                            <li><i class="fa fa-utensils mr-2"></i>Điện thoại về tinh</li>
+                            <li><i class="fa fa-phone-volume mr-2"></i>Tắm bồn</li>
+                            <li><i class="fa fa-shoe-prints mr-2"></i>Dép bông</li>
+                            <li><i class="fab fa-first-order-alt mr-2"></i>Hệ thống sưởi</li>
+                        </ul>
+                        <div class="form-group">
+                            <label for="Số phòng">Số phòng</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="font-weight-bold">Dịch vụ khách sạn</p>
+                        <ul>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Ăn sáng tại giường</li>
+                            <li><i class="fab fa-shopware mr-2"></i> Dọn phòng vệ sinh</li>
+                            <li><i class="fa fa-utensil-spoon mr-2"></i> Bữa sáng cho 2 ngườii</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Giặt là (ủi)</li>
+                            <li><i class="fa fa-utensils mr-2"></i> Dịch vụ là (ủi)</li>
+                            <li><i class="fa fa-allergies mr-2"></i> Giặt khô</li>
+                            <li><i class="fab fa-servicestack mr-2"></i> Dọn phòng hàng ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Giá phòng trên đêm</h5>
+                <span class="d-inline-block text-white bg-danger p-2 rounded mt-2 mb-2">Giảm 25% hôm nay</span>
+                <p>Giá  mỗi đêm rẻ nhất từ</p>
+                <strike class="d-block font-weight-bold">300,000 <sup>đ</sup></strike>
+                <h6 class="text-danger">225,000 <sup>đ</sup></h6>
+                <p>Các mệnh giá</p>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">225,000</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">262,500</span>
+                <span class="d-inline-block p-2 bg-danger text-white rounded">375,000</span>
+                <p class="text-success mt-2">Hủy miễn phí</p>
+                <a href="#" class="btn text-white">Đặt phòng</a>
+                <p class="text-danger mt-2">Còn lại 4 phòng</p>
+            </div>
+        </div>
+    </section>
+    <section class="travel-guide container mb-4">
+        <div class="card">
+            <img src="images/hotel/charm_img_hotel.png" class="w-100" alt="">
+            <div class="left-right-description">
+                <h4>Kinh nghiệm du lịch</h4>
+                <p>Mandala Ha Noi</p>
+            </div>
+            <div class="top-right-button">
+                <a href="#">Xem các phòng còn trống</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="font-weight-bold">Mô tả</p>
+            </div>
+            <div class="col-md-8">
+                <p>Tận hưởng dịch vụ đỉnh cao, đẳng cấp thế giới tại Mandala Hotel & Spa Bac Ninh Nằm tại thành phố Bắc Ninh, Mandala Hotel & Spa Bac Ninh có trung tâm thể dục và sân hiên. Khách sạn 5 sao này cũng cung cấp WiFi miễn phí, dịch vụ lễ tân 24 giờ và dịch vụ phòng. Khách sạn có hồ bơi ngoài trời và tầm nhìn ra vườn. Du khách có thể dùng bữa tại nhà hàng hoặc đồ uống ở quầy bar. Tất cả phòng nghỉ tại khách sạn đều được bố trí máy điều hòa, khu vực ghế ngồi, TV màn hình phẳng với truyền hình vệ tinh, bếp nhỏ, khu vực ăn uống cũng như phòng tắm riêng với máy sấy tóc, chậu rửa vệ sinh (bidet) và vòi sen. Bàn làm việc và ấm đun nước cũng được trang bị trong phòng. Mandala Hotel & Spa Bac Ninh phục vụ bữa sáng tự chọn hoặc kiểu lục địa. Khách sạn nằm cách thành phố Hà Nội 31 km. Sân bay gần nhất là sân bay quốc tế Nội Bài, cách Mandala Hotel & Spa Bac Ninh 32 km. Chỗ nghỉ cung cấp dịch vụ đưa đón sân bay với một khoản phụ phí. Các cặp đôi đặc biệt thích địa điểm này — họ cho điểm 8,1 cho kỳ nghỉ dành cho 2 người. Chúng tôi sử dụng ngôn ngữ của bạn!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="font-weight-bold">Cơ cở vật chất</p>
+            </div>
+            <div class="col-md-8">
+                <p class="font-weight-bold">Miễn phí</p>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="text-success fa fa-swimmer mr-2"></i> Bể bơi vô cực
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fab fa-accessible-icon mr-2"></i> Phòng Gym
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fa fa-rss mr-2"></i> Truy cập Internet
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="text-success fa fa-bell mr-2"></i> Báo động an ninh
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fa fa-user-shield mr-2"></i> Bảo vệ 24h
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fa fa-money-bill mr-2"></i> Két an toàn
+                    </div>
+                </div>
+                <p class="font-weight-bold">Chỗ đậu xe</p>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="text-success fa fa-concierge-bell mr-2"></i> Nhà hàng trong khuôn viên khách sạn
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fa fa-car-alt mr-2"></i> Khu để xe an toàn
+                    </div>
+                </div>
+                <p class="font-weight-bold">Làm đẹp</p>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="text-success fa fa-hand-holding-heart mr-2"></i> Trung tâm Spa & chăm sóc sức khỏe
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="font-weight-bold">Dịch vụ khách sạn</p>
+            </div>
+            <div class="col md-8">
+                <p class="font-weight-bold">Chăm sóc sức khỏe và sắc đẹp</p>
+                <div class="row">
+                    <div class="col-4">
+                        <i class="text-success fa fa-money-bill-wave mr-2"></i> Đổi ngoại tệ
+                    </div>
+                    <div class="col-4">
+                        <i class="text-success fa fa-child mr-2"></i> Dịch vụ giữ trẻ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="comments container">
+        <a href="#" class="d-inline-block text-white bg-primary p-2 rounded mb-3">Xem các phòng còn trống</a>
+        <div class="row">
+            <div class="col-4">
+                <span class="p-2 rounded bg-info text-white">5.0</span>
+                <p class="mt-3"><i class="fa fa-user text-info mr-2"></i>lan anh</p>
+            </div>
+            <div class="col-8">
+                <p class="font-weight-bold">"Rất hài lòng"</p>
+                <p>Tuyệt vời</p>
+                <small class="text-secondary">Đã nhận xét vào 26-05-2020</small>
+            </div>
+        </div>
+    </section>
+    <section class="similar-hotel container mb-4">
+        <h4>Những khách sạn tương tự</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="visited-hotel container mt-4">
+        <h4>Những khách sạn bạn đã ghé thăm</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/hotel/khach_san1.jpg" alt="" class="card-img-top w-100">
+                    <span class="bg-success text-white p-2 rounded">5.0</span>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="#">Khách sạn và Spa Central</a>
+                        </div>
+                        <div class="card-text text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="card-text text primary"><a href="#"><i class="fa fa-map-marker"></i> 18 Thọ Xương, Quận Hoàn Kiếm</a></div>
+                        <h4 class="text-danger">520,000 <sup>đ</sup></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="w-100">
+        <div class="row p-3 bg-dark-gray w-100 m-0">
+            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                <form action="#" class="form-inline">
+                    <div class="form-group">
+                        <input type="email" class="form-control mr-2" placeholder="Nhập email...">
+                        <button type="submit" class="btn mt-2 mt-md-0 float-right float-md-none">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7">
+                <h4 class="text-center text-white">Các deal giảm giá đến 60% sẽ được gửi đến inbox của bạn</h4>
+                <p class="text-center text-white">Khi nhấp vào Đăng ký, bạn đồng ý với các Điều Khoản & Điều Kiện và Chính Sách Bảo mật của chúng tôi</p>
+            </div>
+        </div>
+        <div class="row p-5 bg-little-dark-green w-100 m-0">
+            <div class="col-md-4 text-white">
+                <a href="#"><img src="images/index/logo.png" alt="" class="d-block"></a>
+                <p>Trụ sở: Tầng 3 Grand Plaza 117 Trần Duy Hưng, Q.Cầu Giấy, TP Hà Nội</p>
+                <p>Tel:(84-4) 3555.8999</p>
+                <p>Email:contact@mandala.vn</p>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Về Mandala</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu về APEC</a></li>
+                    <li><a href="#">Giới thiệu nền tảng OTA</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Hợp tác cùng chúng tôi</a></li>
+                    <li><a href="#">Cơ hội nghề nghiệp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Đối tác</h4>
+                <ul>
+                    <li><a href="#">Khám phá các chủ đề</a></li>
+                    <li><a href="#">Trợ giúp đối tác</a></li>
+                    <li><a href="#">Đối tác thanh toán</a></li>
+                    <li><a href="#">Chương trình đại lý</a></li>
+                    <li><a href="#">Chương trình giao lưu</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Điều khoản</h4>
+                <ul>
+                    <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    <li><a href="#">Các điệu kiện</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Quyền riêng tư</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Tải ứng dụng</h4>
+                <ul class="app mt-3">
+                    <li><a href="#"><i class="fa fa-qrcode fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-apple fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-play fa-2x"></i></a></li>
+                </ul>
+                <h4 class="font-weight-bold text-orange">Kết nối với chúng tôi</h4>
+                <ul class="app mt-3">
+                    <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row bg-dark-green p-3 w-100 m-0">
+            <h5 class="text-center w-100 text-white">Copyright © 2020 Mandala INN. All rights reserved</h5>
+        </div>
+    </footer>
+<!--Bootstrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

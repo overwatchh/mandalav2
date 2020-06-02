@@ -1,0 +1,40 @@
+footer ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a:hover {
+  color: #ffa726;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .app li {
+  margin-right: 10px;
+}
+
+footer .btn {
+  background-color: #896d28;
+  color: #fff;
+}
+
+footer .btn:hover {
+  background-color: #fff;
+  color: #896d28;
+}
+/*# sourceMappingURL=footer.css.map */

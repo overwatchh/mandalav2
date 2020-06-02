@@ -1,0 +1,39 @@
+$green : #85c215;
+$dark-green: #012619;
+$orange:#c3a160;
+$bg-dark-gray:#222;
+$bg-little-dark-green:#014029;
+.text-green{
+    color: $green !important;
+}
+.mt-14vh{
+    margin-top: 14vh;
+}
+.text-orange{
+    color:#e3b870;
+}
+.bg-dark-green{
+    background-color: $dark-green !important;
+}
+.bg-little-dark-green{
+    background-color: $bg-little-dark-green;
+}
+.bg-dark-gray{
+    background-color: $bg-dark-gray;
+}
+.font-size-default{
+    font-size: 100%;
+}
+.font-size-80{
+    font-size: 80%;
+}
+.text-above-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+.text-above-img:hover{
+    color: $orange;
+}

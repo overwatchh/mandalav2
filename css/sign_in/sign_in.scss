@@ -1,0 +1,33 @@
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left,.right{
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+    }
+    span{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+nav{
+    border-bottom: none;
+}
+.btn-google{
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-google:hover{
+    background-color: #a3343f;
+    color: #fff;
+}
+.btn-facebook{
+    background-color: #17a2b8;
+    color: #fff;
+}
+.btn-facebook:hover{
+    background-color: #1e6874;
+    color: #fff;
+}

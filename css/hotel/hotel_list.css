@@ -1,0 +1,86 @@
+nav {
+  border-bottom: none;
+}
+
+#searchBar .dropdown:hover > .dropdown-menu {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #012619;
+  opacity: 0.95;
+  color: #fff;
+}
+
+#searchBar ul li {
+  background-color: #012619;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+
+#searchBar ul li a {
+  color: #fff;
+}
+
+#searchBar ul li a i {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+.hotel-list .sort {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+
+.hotel-list .sort .active {
+  background-color: #006341;
+}
+
+.hotel-list .sort .active a {
+  color: #fff;
+}
+
+.hotel-list .sort li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+
+.hotel-list .sort li a {
+  color: #000;
+}
+
+.hotel-list .sort li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hotel-list .sort li:hover {
+  background-color: #006341;
+}
+
+.hotel-list .sort li:hover a {
+  color: #fff;
+}
+
+.hotel-list .bg-dark-red {
+  background-color: #a60321;
+}
+
+.hotel-list .bg-light-red {
+  background-color: #f20530;
+}
+/*# sourceMappingURL=hotel_list.css.map */

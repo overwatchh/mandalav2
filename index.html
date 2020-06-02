@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--Slick-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--minus-plus input-->
+    <script src="js/minus-plus-input.js"></script>
+    <!--momentjs-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <!--date range picker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!--Customize bootsrap-->
+    <link rel="stylesheet" href="css/customizebootstrap.css">
+    <!--header,footer-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!--index.css-->
+    <link rel="stylesheet" href="css/index/index.css">
+    <title>Trang chủ | MANDALAINN</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark-green fixed-top w-100">
+        <a href="index.html" class="navbar-brand"><img src="images/index/logo.png" alt="logo"></a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link text-white">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="intro.html" class="nav-link text-white">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link text-white">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link text-white">Liên hệ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">
+                        <i class="fa fa-globe"></i>Vietnamese
+                    </a>
+
+                    <div class="dropdown-menu bg-dark-green">
+                        <a href="#" class="dropdown-item text-white">Tiếng Anh</a>
+                        <a href="#" class="dropdown-item text-white">Tiếng Việt</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="sign_in.html" class="nav-link text-white"> <i class="fa fa-users"></i> Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sign_up.html" class="nav-link text-white"> <i class="fa fa-user-plus"></i> Đăng ký</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="search w-100 mt-14vh">
+        <h4 class="font-weight-bold text-center pt-1 text-white mb-3">Chuỗi khách sạn nhượng quyền hàng đầu việt nam</h4>
+        <p class="text-center text-white mb-5">Hơn +10.000 phòng khách sạn 5 sao chuẩn quốc tế</p>
+
+        <form action="#" class="container ml-auto mr-auto" autocomplete="off">
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <input w-100 type="text" id="placeToGo" class="form-control" placeholder="Nơi bạn muốn tới">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <input type="text" id="fromTo" class="form-control" role="button" placeholder="Ngày nhận/Ngày trả">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group dropdown">
+                        <input id="roomInfo" class="form-control" role="button" data-toggle="modal" data-target="#roomInfoModal" >
+                    </div>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="roomInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Thông tin đặt phòng</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group text-center">
+                                    <p>Số phòng</p>
+                                    <div class="form-group">
+                                        <button class="minus" ><i class="fa fa-minus"></i></button>
+                                        <input id="numOfRoom" class="text-center" type="number" value="1">
+                                        <button class="plus"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <p>Người lớn</p>
+                                    <div class="form-group">
+                                        <button class="minus" ><i class="fa fa-minus"></i></button>
+                                        <input id="numOfAdult" class="text-center" type="number" value="2">
+                                        <button class="plus"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <p>Trẻ em</p>
+                                    <div class="form-group">
+                                        <button class="minus"><i class="fa fa-minus"></i></button>
+                                        <input id="numOfChildren" class="text-center" type="number" value="3">
+                                        <button class="plus"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button id="roomInfoConfirm" class="btn">Xác nhận</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--minus-plus input-->
+                      <script src="js/minus-plus-input.js"></script>
+                </div>
+                <div class="col-md">
+                    <div class="form-group dropdown">
+                        <button type="text" id="rating" class="form-control dropdown-toggle" role="button">
+                            Xếp hạng sao <span class="text-warning"><i class="fa fa-star"></i></span>
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">
+                                <input type="checkbox"> 
+                                <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                            </div>
+                            <div class="dropdown-item">
+                                <input type="checkbox"> <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                            </div>
+                            <div class="dropdown-item">
+                                <input type="checkbox"> <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <a href="hotel_list.html" class="btn">Tìm kiếm</a>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            $("#fromTo").daterangepicker({
+                locale:{
+                    cancelLabel:'Thoát',
+                    applyLabel:'Xác nhận'
+                }
+            });
+        </script>
+    </section>
+    <section class="sale-banner">
+        <div class="slick">
+            <div><a href="#"><img src="images/index/home_banner.png" class="w-100" alt=""></a></div>
+            <div><a href="#"><img src="images/index/home_banner_1.jpg" class="w-100" alt=""></a></div>
+            <div><a href="#"><img src="images/index/home_banner_2.jpg" class="w-100" alt=""></a></div>
+        </div>
+                <script>
+                    $(".slick").slick({
+                        slidesToShow:1,
+                        slidesToScroll:1,
+                        dots:true
+                    });
+                </script>
+    </section>
+    <section class="suggestion container">
+        <h4 class="text-center font-weight-bold p-2"> <i class="fa fa-gift fa-2x"></i> Gợi ý dành cho quý khách</h4>
+        <div class="suggestion-carousel">
+            <div class="card">
+                <a href="hotel_detail.html"><img src="images/index/combo_deal_1.png" alt="" class="card-img-top w-100"></a>
+                <div class="card-body">
+                    <div class="card-title h4">Hotel dela Coupole Sapa</div>
+                    <div class="title-text text-muted mb-3"><i class="fa fa-map-marker mr-1"></i>01, Hoang Lien Son Street Sapa District Lao Cai</div>
+                    <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
+                    <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
+                    <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
+                    <button class="btn btn-secondary">Đặt ngay</button>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="images/index/combo_deal_2.png" alt="" class="card-img-top w-100"></a>
+                <div class="card-body">
+                    <div class="card-title h4">Hotel dela Coupole Sapa</div>
+                    <div class="title-text text-muted mb-3"><i class="fa fa-map-marker mr-1"></i>01, Hoang Lien Son Street Sapa District Lao Cai</div>
+                    <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
+                    <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
+                    <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
+                    <button class="btn btn-secondary">Đặt ngay</button>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="images/index/combo_deal_3.png" alt="" class="card-img-top w-100"></a>
+                <div class="card-body">
+                    <div class="card-title h4">Hotel dela Coupole Sapa</div>
+                    <div class="title-text text-muted mb-3"><i class="fa fa-map-marker mr-1"></i>01, Hoang Lien Son Street Sapa District Lao Cai</div>
+                    <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
+                    <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
+                    <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
+                    <button class="btn btn-secondary">Đặt ngay</button>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="images/index/combo_deal_4.jpg" alt="" class="card-img-top w-100"></a>
+                <div class="card-body">
+                    <div class="card-title h4">Hotel dela Coupole Sapa</div>
+                    <div class="title-text text-muted mb-3"><i class="fa fa-map-marker mr-1"></i>01, Hoang Lien Son Street Sapa District Lao Cai</div>
+                    <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
+                    <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
+                    <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
+                    <button class="btn btn-secondary">Đặt ngay</button>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="images/index/combo_deal_5.jpg" alt="" class="card-img-top w-100"></a>
+                <div class="card-body">
+                    <div class="card-title h4">Hotel dela Coupole Sapa</div>
+                    <div class="title-text text-muted mb-3"><i class="fa fa-map-marker mr-1"></i>01, Hoang Lien Son Street Sapa District Lao Cai</div>
+                    <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
+                    <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
+                    <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
+                    <button class="btn btn-secondary">Đặt ngay</button>
+                </div>
+            </div>
+        </div>
+        <div class="row d-block text-center mt-2">
+            <a href="#" class="btn btn-primary">Xem thêm -></a>
+        </div>
+        <script>
+            $(".suggestion-carousel").slick({
+                slidesToShow:3,
+                slidesToScroll:1,
+                autoplay:true,
+                autoplaySpeed:2000,
+                responsive:[{
+                    breakpoint:768,
+                    settings:{
+                        slidesToShow:1,
+                        slidesToScroll:1,
+                        autoplay:true,
+                        autoplaySpeed:2000,
+                    }
+                }]
+            });
+        </script>
+    </section>
+    <section class="explore container">
+        <h4 class="font-weight-bold text-center mt-4">Khám phá thêm nhiều điểm đến khác</h4>
+        <p class="text-center mb-4">Gợi ý tuyệt vời được gợi ý bởi chuyên gia của chúng tôi</p>
+        <div class="row mb-2">
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="hotel_list.html" class="position-relative">
+                    <img src="images/index/hanoi.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Hà Nội</h4>
+                        <p>220 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="#" class="position-relative">
+                    <img src="images/index/saigon.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Hà Giang</h4>
+                        <p>120 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="#" class="position-relative">
+                    <img src="images/index/danang.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Đà Nẵng</h4>
+                        <p>110 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="#" class="position-relative">
+                    <img src="images/index/hue.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Huế</h4>
+                        <p>150 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="#" class="position-relative">
+                    <img src="images/index/hanoi.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Hà Nội</h4>
+                        <p>220 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-2 pr-0">
+                <a href="#" class="position-relative">
+                    <img src="images/index/hanoi.png" class="w-100" alt="">
+                    <div class="text-above-img text-center">
+                        <h4>Hà Nội</h4>
+                        <p>220 khách sạn</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    <section class="inspiration p-5">
+        <h4 class="text-center font-weight-bold">Cảm hứng du lịch</h4>
+        <p class="text-center">Các trải nghiệm được yêu thích bởi người yêu du lịch</p>
+        <div class="row mb-2">
+            <div class="col-md-8 mb-2 pr-0 pl-0">
+                <div class="card">
+                    <img src="images/index/ha_giang.png" class="w-100 card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Review chuyến đi Hà Giang săn mùa vàng</div>
+                        <div class="card-text">Nhắc đến mùa vàng Tây Bắc, người ta sẽ nghĩ ngay đến Hà Giang.Cảnh đẹp mùa lúa chín nơi đây quả là danh bất hư truyền.</div>
+                        <a href="#" class="btn btn-secondary mt-2">Xem ngay ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-2 pr-0 pl-0">
+                <div class="card h-100">
+                    <img src="images/index/influence_5.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <a href="news.html" class="font-weight-bold">Những khách sạn 7 sao duy nhất trên thế giới nơi đẳng cập vượt luôn mức 5 sao.</a>
+                            <p class="mt-2"><i class="fa fa-clock-o mr-2"></i><span>6 ngày trước</span><p>
+                            <p >Bún Thang là nét ẩm thực mà khi đặt chân đến Hà Nội không thể bỏ qua vì nó không chỉ là
+                                một món ăn, mà nó còn là cả một tinh hoa ẩm thực được người dân Hà Thành giữ gìn hàng trăm năm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-4 mb-2 pr-0 pl-0">
+                <div class="card">
+                    <img src="images/index/influence_5.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <a href="#" class="font-weight-bold clean-a">Những khách sạn 7 sao duy nhất trên thế giới nơi đẳng cập vượt luôn mức 5 sao.</a>
+                            <p class="mt-2"><i class="fa fa-clock-o mr-2"></i><span>6 ngày trước</span><p>
+                            <p >Bún Thang là nét ẩm thực mà khi đặt chân đến Hà Nội không thể bỏ qua vì nó không chỉ là
+                                một món ăn, mà nó còn là cả một tinh hoa ẩm thực được người dân Hà Thành giữ gìn hàng trăm năm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-2 pr-0 pl-0">
+                <div class="card">
+                    <img src="images/index/influence_5.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <a href="#" class="font-weight-bold clean-a">Những khách sạn 7 sao duy nhất trên thế giới nơi đẳng cập vượt luôn mức 5 sao.</a>
+                            <p class="mt-2"><i class="fa fa-clock-o mr-2"></i><span>6 ngày trước</span><p>
+                            <p >Bún Thang là nét ẩm thực mà khi đặt chân đến Hà Nội không thể bỏ qua vì nó không chỉ là
+                                một món ăn, mà nó còn là cả một tinh hoa ẩm thực được người dân Hà Thành giữ gìn hàng trăm năm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-2 pr-0 pl-0">
+                <div class="card">
+                    <img src="images/index/influence_5.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <a href="#" class="font-weight-bold clean-a">Những khách sạn 7 sao duy nhất trên thế giới nơi đẳng cập vượt luôn mức 5 sao.</a>
+                            <p class="mt-2"><i class="fa fa-clock-o mr-2"></i><span>6 ngày trước</span><p>
+                            <p >Bún Thang là nét ẩm thực mà khi đặt chân đến Hà Nội không thể bỏ qua vì nó không chỉ là
+                                một món ăn, mà nó còn là cả một tinh hoa ẩm thực được người dân Hà Thành giữ gìn hàng trăm năm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-block text-center">
+            <a href="#" class="btn btn-primary">Xem thêm -></a>
+        </div>
+    </section>
+    <footer class="w-100">
+        <div class="row p-3 bg-dark-gray w-100 m-0">
+            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                <form action="#" class="form-inline">
+                    <div class="form-group">
+                        <input type="email" class="form-control mr-2" placeholder="Nhập email...">
+                        <button type="submit" class="btn mt-2 mt-md-0 float-right float-md-none">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7">
+                <h4 class="text-center text-white">Các deal giảm giá đến 60% sẽ được gửi đến inbox của bạn</h4>
+                <p class="text-center text-white">Khi nhấp vào Đăng ký, bạn đồng ý với các Điều Khoản & Điều Kiện và Chính Sách Bảo mật của chúng tôi</p>
+            </div>
+        </div>
+        <div class="row p-5 bg-little-dark-green w-100 m-0">
+            <div class="col-md-4 text-white">
+                <a href="#"><img src="images/index/logo.png" alt="" class="d-block"></a>
+                <p>Trụ sở: Tầng 3 Grand Plaza 117 Trần Duy Hưng, Q.Cầu Giấy, TP Hà Nội</p>
+                <p>Tel:(84-4) 3555.8999</p>
+                <p>Email:contact@mandala.vn</p>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Về Mandala</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu về APEC</a></li>
+                    <li><a href="#">Giới thiệu nền tảng OTA</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Hợp tác cùng chúng tôi</a></li>
+                    <li><a href="#">Cơ hội nghề nghiệp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Đối tác</h4>
+                <ul>
+                    <li><a href="#">Khám phá các chủ đề</a></li>
+                    <li><a href="#">Trợ giúp đối tác</a></li>
+                    <li><a href="#">Đối tác thanh toán</a></li>
+                    <li><a href="#">Chương trình đại lý</a></li>
+                    <li><a href="#">Chương trình giao lưu</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Điều khoản</h4>
+                <ul>
+                    <li><a href="#">Những câu hỏi thường gặp</a></li>
+                    <li><a href="#">Các điệu kiện</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Quyền riêng tư</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h4 class="font-weight-bold text-orange">Tải ứng dụng</h4>
+                <ul class="app mt-3">
+                    <li><a href="#"><i class="fa fa-qrcode fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-apple fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-play fa-2x"></i></a></li>
+                </ul>
+                <h4 class="font-weight-bold text-orange">Kết nối với chúng tôi</h4>
+                <ul class="app mt-3">
+                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row bg-dark-green p-3 w-100 m-0">
+            <h5 class="text-center w-100 text-white">Copyright © 2020 Mandala INN. All rights reserved</h5>
+        </div>
+    </footer>
+<!--Bootstrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
