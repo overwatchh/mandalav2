@@ -1,0 +1,19 @@
+.bg-gray {
+  background-color: #efefef;
+}
+
+.title {
+  width: 65%;
+}
+
+.done {
+  padding: 3em;
+  text-align: center;
+}
+
+.done img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1em;
+}
+/*# sourceMappingURL=booking_process.css.map */
