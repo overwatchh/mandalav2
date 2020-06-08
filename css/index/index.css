@@ -6,6 +6,10 @@
   padding-top: 2em;
 }
 
+.search .font-size-75 {
+  font-size: 75%;
+}
+
 .search .btn {
   background-color: #896d28;
   color: #fff;
@@ -18,6 +22,22 @@
 
 .search .dropdown:hover > .dropdown-menu {
   display: block;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.search .dropdown:hover > .dropdown-menu input[type="number"] {
+  width: 50px;
+}
+
+.search .dropdown:hover > .dropdown-menu button {
+  border-radius: 25px;
+  background-color: #40b05b;
+  border: none;
+}
+
+.search .dropdown:hover > .dropdown-menu button i {
+  color: #fff;
 }
 
 .search a {
@@ -36,7 +56,7 @@ section .slick-next {
 
 section .slick-prev {
   z-index: 1;
-  left: 35px;
+  left: 18px;
 }
 
 section .slick-prev:before, section .slick-next:before {
@@ -63,6 +83,13 @@ section .slick-dots li button:before {
 
 .suggestion-carousel .slick-slide {
   margin-right: 1em;
+}
+
+.suggestion-carousel .card:hover {
+  -webkit-transform: translate3d(0, -1px, 0) scale(1.03);
+          transform: translate3d(0, -1px, 0) scale(1.03);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .inspiration {

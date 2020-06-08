@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'> </script>
     <!--Font-awesome-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Customize bootsrap-->
@@ -74,23 +75,23 @@
                     </div>
                     <!--Tên-->
                     <div class="form-group">
-                        <label for="name">Tên của bạn <sup>*</sup></label>
+                        <label for="name">Tên của bạn <sup class="text-danger">*</sup></label>
                         <input id="name" type="text" required class="form-control">
                     </div>
                     <!--Sđt-->
                     <div class="form-group">
-                        <label for="phone">Số điện thoại</label>
+                        <label for="phone">Số điện thoại <sup class="text-danger">*</sup></label>
                         <input type="text" id="phone" required class="form-control">
                     </div>
                     <!--Email-->
                     <div class="form-group">
-                        <label for="email">Email <sup>*</sup></label>
+                        <label for="email">Email <sup class="text-danger">*</sup></label>
                         <input id="email" type="text" required class="form-control">
                     </div>
                     <!--Nội dung-->
                     <div class="form-group">
                         <label for="content">
-                            Nội dung<sup>*</sup>
+                            Nội dung<sup class="text-danger">*</sup>
                         </label>
                         <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
                     </div>

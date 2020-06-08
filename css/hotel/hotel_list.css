@@ -28,6 +28,16 @@ nav {
   margin-right: 3px;
 }
 
+.hotel-list a {
+  color: #000;
+}
+
+.hotel-list a:hover {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .hotel-list .sort {
   list-style-type: none;
   display: -webkit-box;
@@ -82,5 +92,16 @@ nav {
 
 .hotel-list .bg-light-red {
   background-color: #f20530;
+}
+
+.right-triangle-top-right {
+  position: absolute;
+  top: 0px;
+  right: -8px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #28a745;
+  border-right: 25px solid transparent;
 }
 /*# sourceMappingURL=hotel_list.css.map */

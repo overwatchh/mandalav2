@@ -110,4 +110,15 @@
   color: #000;
   font-weight: bold;
 }
+
+.right-triangle-top-right {
+  position: absolute;
+  top: 0px;
+  right: -8px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #28a745;
+  border-right: 25px solid transparent;
+}
 /*# sourceMappingURL=hotel_detail.css.map */

@@ -15,16 +15,13 @@ var plus = $(".plus").click(
     
 );
 
-var numOfGuestModal = $("#roomInfoModal").on("hide.bs.modal",function(){
+function roomInfo(){
     const numOfRoom = $("#numOfRoom").val();
-    const numOfAdult = $("#numOfAdult").val();
-    const numOfChildren = $("#numOfChildren").val();
+    const numOfAldult = $("#numOfRoom").val();
+    const numOfChildren = $("#numOfRoom").val();
 
-    $("#roomInfo").val(numOfRoom+" phòng,"+numOfAdult+" người lớn,"+numOfChildren+" trẻ em");
-});
+    let roomInfo = numOfRoom + " Phòng, " + numOfAldult + " Người lớn, " + numOfChildren + " Trẻ em";
 
-var roomInfoConfirm = $("#roomInfoConfirm").click(function(){
-    $("#roomInfoModal").modal("hide");
-});
-
-
+    $("#roomInfo").html(roomInfo);
+}
+roomInfo();

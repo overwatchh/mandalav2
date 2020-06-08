@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'> </script>
+
     <!--Slick-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
@@ -75,84 +77,74 @@
 
         <form action="#" class="container ml-auto mr-auto" autocomplete="off">
             <div class="row">
+                <!--Nơi bạn muốn tới-->
                 <div class="col-md">
                     <div class="form-group">
-                        <input w-100 type="text" id="placeToGo" class="form-control" placeholder="Nơi bạn muốn tới">
+                        <input w-100 type="text" id="placeToGo" class="form-control font-size-75" placeholder="Nơi bạn muốn tới">
                     </div>
                 </div>
+                <!--Check-in/check-out-->
                 <div class="col-md">
                     <div class="form-group">
-                        <input type="text" id="fromTo" class="form-control" role="button" placeholder="Ngày nhận/Ngày trả">
+                        <input type="text" id="fromTo" class="form-control font-size-75" role="button" placeholder="Ngày nhận/Ngày trả">
                     </div>
                 </div>
+                <!-- Thông tin đặt phòng-->
                 <div class="col-md">
                     <div class="form-group dropdown">
-                        <input id="roomInfo" class="form-control" role="button" data-toggle="modal" data-target="#roomInfoModal" >
-                    </div>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="roomInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Thông tin đặt phòng</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group text-center">
-                                    <p>Số phòng</p>
-                                    <div class="form-group">
-                                        <button class="minus" ><i class="fa fa-minus"></i></button>
-                                        <input id="numOfRoom" class="text-center" type="number" value="1">
-                                        <button class="plus"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                    <p>Người lớn</p>
-                                    <div class="form-group">
-                                        <button class="minus" ><i class="fa fa-minus"></i></button>
-                                        <input id="numOfAdult" class="text-center" type="number" value="2">
-                                        <button class="plus"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                    <p>Trẻ em</p>
-                                    <div class="form-group">
-                                        <button class="minus"><i class="fa fa-minus"></i></button>
-                                        <input id="numOfChildren" class="text-center" type="number" value="3">
-                                        <button class="plus"><i class="fa fa-plus"></i></button>
-                                    </div>
+                        <button id="roomInfo" class="form-control dropdown-toggle font-size-75"></button>
+                        <div class="dropdown-menu">
+                            <div class="form-group text-center">
+                                <p>Số phòng</p>
+                                <div class="form-group">
+                                    <button class="minus" ><i class="fa fa-minus"></i></button>
+                                    <input id="numOfRoom" class="text-center" type="number" value="1">
+                                    <button class="plus"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <p>Người lớn</p>
+                                <div class="form-group">
+                                    <button class="minus" ><i class="fa fa-minus"></i></button>
+                                    <input id="numOfAdult" class="text-center" type="number" value="1">
+                                    <button class="plus"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <p>Trẻ em</p>
+                                <div class="form-group">
+                                    <button class="minus"><i class="fa fa-minus"></i></button>
+                                    <input id="numOfChildren" class="text-center" type="number" value="1">
+                                    <button class="plus"><i class="fa fa-plus"></i></button>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                              <button id="roomInfoConfirm" class="btn">Xác nhận</button>
-                            </div>
-                          </div>
                         </div>
-                      </div>
-                      <!--minus-plus input-->
-                      <script src="js/minus-plus-input.js"></script>
+                    </div>
+                    <!--minus-plus input-->
+                    <script src="js/minus-plus-input.js"></script>
                 </div>
+                <!--Xếp hạng sao-->
                 <div class="col-md">
                     <div class="form-group dropdown">
-                        <button type="text" id="rating" class="form-control dropdown-toggle" role="button">
-                            Xếp hạng sao <span class="text-warning"><i class="fa fa-star"></i></span>
+                        <button id="rating" class="form-control dropdown-toggle font-size-75">
+                            <span id="starRating">Xếp hạng:</span> <span class="text-warning"><i class="fa fa-star"></i></span>
                         </button>
 
                         <div class="dropdown-menu">
                             <div class="dropdown-item">
-                                <input type="checkbox"> 
-                                <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                <input type="checkbox" class="rating" id="rating_5"> 
+                                <span class="text-warning stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             </div>
                             <div class="dropdown-item">
-                                <input type="checkbox"> <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                <input type="checkbox" class="rating" id="rating_4"> <span class="text-warning stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             </div>
                             <div class="dropdown-item">
-                                <input type="checkbox"> <span class="text-warning"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                <input type="checkbox" class="rating" id="rating_3"> <span class="text-warning stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             </div>
                         </div>
                     </div>
+                    <script src="js/rating.js">
+
+                    </script>
                 </div>
                 <div class="col-md">
-                    <a href="hotel_list.html" class="btn">Tìm kiếm</a>
+                    <a href="hotel_list.html" class="btn font-size-75">Tìm kiếm</a>
                 </div>
             </div>
         </form>
@@ -180,7 +172,7 @@
                     });
                 </script>
     </section>
-    <section class="suggestion p-5">
+    <section class="suggestion px-5">
         <h4 class="text-center font-weight-bold p-2"> <i class="fa fa-gift fa-2x"></i> Gợi ý dành cho quý khách</h4>
         <div class="suggestion-carousel">
             <div class="card">
@@ -191,7 +183,7 @@
                     <p><span class="text-white bg-success p-1 rounded mr-1">4.2 <i class="fa fa-star"></i></span>(102) đánh giá Very good</p>
                     <p><span class="text-danger">515.890 <sup>đ</sup></span> 1 phòng / đêm</p>
                     <p> <strike>1.515.890 <sup>đ</sup></strike> <span class="text-warning">Giảm 70%</span></p>
-                    <button class="btn btn-secondary">Đặt ngay</button>
+                    <a href="hotel_list.html" class="btn btn-secondary">Đặt ngay</a>
                 </div>
             </div>
             <div class="card">
@@ -240,7 +232,7 @@
             </div>
         </div>
         <div class="row d-block text-center mt-2">
-            <a href="#" class="btn btn-primary">Xem thêm -></a>
+            <a href="#" class="btn btn-primary mt-3">Xem thêm -></a>
         </div>
         <script>
             $(".suggestion-carousel").slick({
@@ -260,7 +252,7 @@
             });
         </script>
     </section>
-    <section class="explore p-5">
+    <section class="explore px-5">
         <h4 class="font-weight-bold text-center mt-4">Khám phá thêm nhiều điểm đến khác</h4>
         <p class="text-center mb-4">Gợi ý tuyệt vời được gợi ý bởi chuyên gia của chúng tôi</p>
         <div class="row mb-2">
@@ -328,7 +320,7 @@
         </div>
         
     </section>
-    <section class="inspiration p-5">
+    <section class="inspiration px-5">
         <h4 class="text-center font-weight-bold">Cảm hứng du lịch</h4>
         <p class="text-center">Các trải nghiệm được yêu thích bởi người yêu du lịch</p>
         <div class="row mb-2">
@@ -405,7 +397,7 @@
             </div>
         </div>
         <div class="row d-block text-center">
-            <a href="#" class="btn btn-primary">Xem thêm -></a>
+            <a href="#" class="btn btn-primary mb-3">Xem thêm -></a>
         </div>
     </section>
     <footer class="w-100">
