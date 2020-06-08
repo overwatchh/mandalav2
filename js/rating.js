@@ -43,7 +43,6 @@ $(".rating").click(function(){
     //Cập nhật trạng thái hiển thị
     let currentRating = "Xếp hạng:";
     $("#starRating").html(currentRating + checked_rating);
-    console.log(rating);
 });
 //checkbox trigger when users click on stars next to checkbox
 $(".stars").click(function(){
