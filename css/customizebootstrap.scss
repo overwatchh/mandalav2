@@ -37,3 +37,60 @@ $bg-little-dark-green:#014029;
 .text-above-img:hover{
     color: $orange;
 }
+.go-to-top{
+    width: 150px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
+    .up-arrow{
+        display: none;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #74644c;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: #9c8865;
+        margin-bottom: 1.2em;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+        }
+    }
+    .up-arrow:hover{
+        background-color: #fff;
+        i{
+            color: #9c9c9c;
+        }
+    }
+    .ho-tro{
+        display: block;
+        background-color: #497336e5;
+        padding: 5px;
+        p,h6{
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+    .can-ho-tro{
+        display: block;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        background-color: #032418d0;
+    }
+    .can-ho-tro{
+        text-decoration: none;
+    }
+}

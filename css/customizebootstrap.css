@@ -42,4 +42,76 @@
 .text-above-img:hover {
   color: #c3a160;
 }
+
+.go-to-top {
+  width: 150px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+}
+
+.go-to-top .up-arrow {
+  display: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #74644c;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9c8865;
+  margin-bottom: 1.2em;
+}
+
+.go-to-top .up-arrow i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.go-to-top .up-arrow:hover {
+  background-color: #fff;
+}
+
+.go-to-top .up-arrow:hover i {
+  color: #9c9c9c;
+}
+
+.go-to-top .ho-tro {
+  display: block;
+  background-color: #497336e5;
+  padding: 5px;
+}
+
+.go-to-top .ho-tro p, .go-to-top .ho-tro h6 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.go-to-top .ho-tro p {
+  font-size: 10px;
+}
+
+.go-to-top .can-ho-tro {
+  display: block;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #032418d0;
+}
+
+.go-to-top .can-ho-tro {
+  text-decoration: none;
+}
 /*# sourceMappingURL=customizebootstrap.css.map */
